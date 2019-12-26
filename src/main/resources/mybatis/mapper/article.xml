@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.chenleizhou.techlog.mapper.ArticleMapper">
+
+    <!--  List<Article> getAllArticles();  -->
+    <select id="getAllArticles" resultType="com.chenleizhou.techlog.entity.Article">
+        SELECT
+            id, avatar, title, author, author_id, content, update_time, image
+        FROM
+            article;
+    </select>
+
+    <!--  getArticleById  -->
+    <select id="getArticleById" resultType="com.chenleizhou.techlog.entity.Article">
+        SELECT * FROM article WHERE id=#{id}
+    </select>
+
+<!--    &lt;!&ndash;  public List<User> selectUsers();  &ndash;&gt;-->
+<!--    <select id="selectUsers" resultType="user">-->
+<!--        select id,name,phone,email from user-->
+<!--    </select>-->
+
+<!--    &lt;!&ndash; int insert(User user);   &ndash;&gt;-->
+<!--    <insert id="insert">-->
+<!--        insert into user(-->
+<!--            name,-->
+<!--            phone,-->
+<!--            email,-->
+<!--            aboutme,-->
+<!--            password,-->
+<!--            avatar,-->
+<!--            type,-->
+<!--            createTime,-->
+<!--            enable,-->
+<!--            agentId-->
+<!--        ) values (-->
+<!--            #{name},-->
+<!--            #{phone},-->
+<!--            #{email},-->
+<!--            #{aboutme},-->
+<!--            #{password},-->
+<!--            #{avatar},-->
+<!--            #{type},-->
+<!--            #{createTime},-->
+<!--            #{enable},-->
+<!--            #{agentId},-->
+<!--        )-->
+<!--    </insert>-->
+
+<!--    &lt;!&ndash;  int delete(String email);  &ndash;&gt;-->
+<!--    <delete id="delete">-->
+<!--        delete from user where email = #{email}-->
+<!--    </delete>-->
+</mapper>

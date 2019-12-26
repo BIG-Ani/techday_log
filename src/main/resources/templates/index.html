@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Lei Premium</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="asserts/css/bootstrap.min.css" th:href="@{/webjars/bootstrap/4.4.1/css/bootstrap.css}" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="asserts/css/index.css" th:href="@{/asserts/css/index.css}" rel="stylesheet">
+    <!-- Google fonts   -->
+    <link href="https://fonts.googleapis.com/css?family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Acme&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="container">
+        <header class="jumbotron">
+            <div class="row text-center mb-5" style="display:block">
+                <h1 id="site-title"><span id="givenName">Leichen</span> <span id="familyName">Zhou</span> <wbr>|<wbr>
+                    <ruby>
+                        <rb id="familyName_cn">周</rb><rp>(</rp><rt>zhōu</rt><rp>)</rp>
+                    </ruby>
+                    <ruby>
+                        <rb id="givenName_cn">磊陈</rb><rp>(</rp><rt>lěichén</rt><rp>)</rp>
+                    </ruby>
+                </h1>
+            </div>
+
+            <div class="row">
+                <div class="col-4 pr-5">
+                    <img th:src="@{/images/bmw.png}" width="250" height="250" class="float-right">
+                </div>
+                <div class="col-8">
+                    <p class="float-left">
+                        An Engineering Master at Northeastern University - Seattle campus.
+                        My major is Computer Software Engineering and have engaged in<span itemprop="knowsAbout">algorithms</span>, <span itemprop="knowsAbout">web application development</span> and <span itemprop="knowsAbout">cloud service</span>. I'm also interested in more applied application or architecture with nice theoretical components.
+                        Here is my <a href="files/cv.pdf" th:href="@{/files/cv.pdf}">CV</a>(last updated May 2019).
+                    </p>
+                </div>
+            </div>
+        </header>
+
+        <div class="row">
+            <div class="media col-lg-12">
+                <img src="..." class="align-self-start mr-3" alt="...">
+                <div class="media-body">
+                    <h5 class="mt-0">Top-aligned media</h5>
+                    <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+                    <p>Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+
+</html>

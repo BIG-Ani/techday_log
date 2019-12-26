@@ -1,0 +1,13 @@
+#givenName,#familyName{
+    font-family: 'Acme', sans-serif;
+    font-size: 28px;
+}
+
+.jumbotron{
+    background-color: #ffffff;
+}
+
+#givenName_cn,#familyName_cn{
+    font-family: 'Ma Shan Zheng', cursive;;
+    font-size: 33px;
+}
