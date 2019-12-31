@@ -12,4 +12,7 @@ public interface ArticleMapper {
 
     Article getArticleById(Integer id);
 
+    void insertArticle(Article article);
+
+    void deleteArticle(Integer id);
 }

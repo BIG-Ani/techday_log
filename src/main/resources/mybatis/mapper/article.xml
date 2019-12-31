@@ -8,15 +8,26 @@
     <!--  List<Article> getAllArticles();  -->
     <select id="getAllArticles" resultType="com.chenleizhou.techlog.entity.Article">
         SELECT
-            id, avatar, title, author, author_id, content, update_time, image
+            *
         FROM
             article;
     </select>
 
     <!--  getArticleById  -->
     <select id="getArticleById" resultType="com.chenleizhou.techlog.entity.Article">
-        SELECT * FROM article WHERE id=#{id}
+        SELECT * FROM article WHERE id=#{id};
     </select>
+
+    <!--  insertArticle   -->
+    <insert id="insertArticle" parameterType="com.chenleizhou.techlog.entity.Article">
+        INSERT into article(id, title, author, content, timestamp)
+        values (#{id}, #{title}, #{author}, #{content}, #{timestamp})
+    </insert>
+
+    <!--  deleteArticle  -->
+    <delete id="deleteArticle" parameterType="java.lang.Integer">
+        DELETE FROM techlog.article WHERE id = #{id};
+    </delete>
 
 <!--    &lt;!&ndash;  public List<User> selectUsers();  &ndash;&gt;-->
 <!--    <select id="selectUsers" resultType="user">-->

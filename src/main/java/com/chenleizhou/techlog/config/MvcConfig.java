@@ -11,13 +11,16 @@ public class MvcConfig implements WebMvcConfigurer {
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry.addResourceHandler("/**")
-                .addResourceLocations("classpath:/static/");
+                .addResourceLocations("classpath:/static/")
+                .addResourceLocations("classpath:/templates/");
     }
 
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
         registry.addViewController("/").setViewName("index");
         registry.addRedirectViewController("/", "index");
+        registry.addRedirectViewController("/index.html", "index");
+        registry.addRedirectViewController("/dashboard.html", "dashboard");
     }
 
 
