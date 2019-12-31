@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>all articles</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="asserts/css/bootstrap.min.css" th:href="@{/webjars/bootstrap/4.4.1/css/bootstrap.css}" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="../../static/asserts/css/index.css" th:href="@{/asserts/css/article.css}" rel="stylesheet">
+</head>
+    <body>
+
+        <div class="nav-scroller bg-white shadow-sm text-muted ml-5 mr-5" th:if="${session.loginUser != null}">
+            <nav class="nav nav-underline ml-3 mr-3">
+                <a class="nav-link active" th:href="@{/dashboard}">Dashboard</a>
+                <a class="nav-link">
+                    Articles
+                    <span class="badge badge-pill bg-light align-text-bottom" th:text="${articles.size()}" th:href="@{/articles}">27</span>
+                </a>
+<!--                <a class="nav-link" href="#">Link</a>-->
+<!--                <a class="nav-link" href="#">Link</a>-->
+            </nav>
+        </div>
+
+        <main role="main">
+
+<!--            <section class="jumbotron text-center">-->
+<!--                <div class="container">-->
+    <!--                <h1>Welcome to All</h1>-->
+    <!--                <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p>-->
+    <!--                <p>-->
+    <!--                    <a href="#" class="btn btn-primary my-2">Main call to action</a>-->
+    <!--                    <a href="#" class="btn btn-secondary my-2">Secondary action</a>-->
+    <!--                </p>-->
+<!--                </div>-->
+<!--            </section>-->
+
+            <div class="album py-5 bg-light">
+                <div class="container">
+
+                    <h1 class="row border-bottom border-dark">
+                        Post
+                    </h1>
+
+<!--                    <div class="row">-->
+<!--                        <div class="col-md-4" th:each="article:${articles}">-->
+<!--                            <div class="card mb-4 shadow-sm">-->
+<!--                                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>-->
+<!--                                <div class="card-body">-->
+<!--                                    <p class="card-text" th:text="${article.getTitle()}">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>-->
+<!--                                    <div class="d-flex justify-content-between align-items-center">-->
+<!--    &lt;!&ndash;                                    <p class="card-text" th:text="${article.getTitle()}">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>&ndash;&gt;-->
+<!--    &lt;!&ndash;                                                                        // can only be seen from backend&ndash;&gt;-->
+<!--    &lt;!&ndash;                                    <div class="btn-group">&ndash;&gt;-->
+<!--                                            <a type="button" class="btn btn-sm btn-outline-secondary" th:href="@{/article/{articleId}(articleId = ${article.getId()})}">View</a>-->
+<!--    &lt;!&ndash;                                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>&ndash;&gt;-->
+<!--    &lt;!&ndash;                                    </div>&ndash;&gt;-->
+<!--                                        <small class="text-muted" th:text="${#dates.format(article.getTimestamp(), 'dd/MMM/yyyy')}"}>9 mins</small>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+
+                    <div class="row mb-2" th:each="article:${articles}">
+                        <div class="col-md-6 text-left">
+                            <span class="content-post-title" th:text="${article.getTitle()}"></span>
+                        </div>
+                        <div class="col-md-6 text-right" th:text="${#dates.format(article.getTimestamp(), 'dd/MMM/yyyy')}"></div>
+                    </div>
+
+                </div>
+            </div>
+
+        </main>
+
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    </body>
+</html>

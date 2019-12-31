@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.chenleizhou.techlog.mapper.UserMapper">
+
+    <!--  List<Article> getAllArticles();  -->
+<!--    <select id="getAllArticles" resultType="com.chenleizhou.techlog.entity.User">-->
+<!--        SELECT-->
+<!--            id, avatar, title, author, author_id, content, update_time, image-->
+<!--        FROM-->
+<!--            article;-->
+<!--    </select>-->
+
+    <!--  getArticleById  -->
+    <select id="findUserByName" resultType="com.chenleizhou.techlog.entity.User">
+        SELECT * FROM user WHERE name=#{name}
+    </select>
+
+    <!--  insertArticle   -->
+    <insert id="newUser" parameterType="com.chenleizhou.techlog.entity.User">
+        INSERT into user(id, name, password, avatar)
+        values (#{id}, #{name}, #{password}, #{avatar})
+    </insert>
+</mapper>

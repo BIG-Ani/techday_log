@@ -23,5 +23,13 @@ public class ArticleService implements ArticleMapper {
         return articleMapper.getArticleById(id);
     }
 
+    @Override
+    public void insertArticle(Article article) {
+        articleMapper.insertArticle(article);
+    }
 
+    @Override
+    public void deleteArticle(Integer id) {
+        articleMapper.deleteArticle(id);
+    }
 }

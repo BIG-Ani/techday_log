@@ -8,7 +8,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import java.util.Collection;
-import java.util.List;
 
 @Controller
 public class IndexController {
@@ -23,9 +22,18 @@ public class IndexController {
         return "index";
     }
 
-    @GetMapping("/login")
-    public String login(){
-        return "login";
+    @GetMapping("/articles")
+    public String allArticles(Model model){
+        Collection<Article> articles = articleService.getAllArticles();
+        model.addAttribute("articles", articles);
+
+        return "article/articles";
     }
 
+    @GetMapping("/dashboard")
+    public String loginToDashboard(Model model){
+        Collection<Article> articles = articleService.getAllArticles();
+        model.addAttribute("articles", articles);
+        return "article/dashboard";
+    }
 }

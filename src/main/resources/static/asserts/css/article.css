@@ -1,0 +1,11 @@
+.nav-scroller nav a{
+    color: #777777;
+}
+
+.nav-scroller{
+    margin: auto;
+}
+
+.content-post-title{
+    border-bottom: 1px dotted #000;
+}

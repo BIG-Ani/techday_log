@@ -41,10 +41,14 @@ spring:
         login-password: druid1210
         login-username: admin
         enabled: true
-      url: jdbc:mysql://localhost:3306/tech_article?useUnicode=true&characterEncoding=UTF-8
+      url: jdbc:mysql://localhost:3306/techlog?useUnicode=true&characterEncoding=UTF-8
       driver-class-name: com.mysql.cj.jdbc.Driver
       username: root
       password: root1210
+  mvc:
+    hiddenmethod:
+      filter:
+        enabled: true
 
 mybatis:
   config-location: classpath:/mybatis/mybatis-config.xml

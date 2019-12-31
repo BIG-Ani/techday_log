@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title th:text="${foundArticle.getTitle()}"></title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="asserts/css/bootstrap.min.css" th:href="@{/webjars/bootstrap/4.4.1/css/bootstrap.css}" rel="stylesheet">
+        <!-- Custom styles for this template -->
+        <link href="asserts/css/index.css" th:href="@{/asserts/css/detail.css}" rel="stylesheet">
+        <!-- Google fonts   -->
+        <link href="https://fonts.googleapis.com/css?family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Acme&display=swap" rel="stylesheet">
+
+        <!--        google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Gelasio:400i&display=swap" rel="stylesheet">
+    </head>
+
+    <body class="mt-5">
+        <div class="container-fluid">
+            <main>
+                <article>
+                    <h1 class="border-bottom border-dark" th:text="${foundArticle.getTitle()}"></h1>
+
+                    <div>
+                        <p th:text="${foundArticle.getContent()}">
+                            article content
+                        </p>
+                    </div>
+                </article>
+            </main>
+
+            <footer class="text-muted">
+                <p class="d-md-block">Posted by <a th:href="@{/index}" th:text="${foundArticle.getAuthor()}"></a> on <span th:text="${#dates.format(foundArticle.getTimestamp(), 'MMM-dd-yyyy')}"></span></p>
+            </footer>
+        </div>
+
+
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    </body>
+
+</html>
