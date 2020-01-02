@@ -86,7 +86,8 @@
 							<tbody>
 								<tr th:each="article : ${articles}">
 									<td th:text="${article.getId()}"></td>
-									<td th:text="${article.getTitle()}"></td>
+<!--									<td th:text="${article.getTitle()}"></td>-->
+									<td><a th:href="@{/article/} + ${article.getId()}" th:text="${article.getTitle()}"></a></td>
 									<td th:text="${article.getAuthor()}"></td>
 									<td th:text="${article.getCategory()}"></td>
 									<td th:text="${#dates.format(article.getTimestamp(), 'dd/MMM/yyyy HH:mm')}"></td>

@@ -28,20 +28,19 @@ public class AuthController {
     public String userLogin(@PathParam("username") String username,
                             @PathParam("password") String password,
                             Map<String, Object> errors,
-                            HttpSession session){
+                            HttpSession session) {
 
-        if(!StringUtils.isEmpty(username) && !StringUtils.isEmpty(password)){
+        if (!StringUtils.isEmpty(username) && !StringUtils.isEmpty(password)) {
             User user = userService.findUserByName(username);
-            System.out.println(user);
 
-            if (user.getName().equals(username) && user.getPassword().equals(password)){
+            if (user.getName().equals(username) && user.getPassword().equals(password)) {
                 session.setAttribute("loginUser", username);
                 return "redirect:/index.html";
-            }else {
+            } else {
                 errors.put("msg", "user name or password is wrong");
                 return "login";
             }
-        }else {
+        } else {
             errors.put("msg", "username or password can not be blank");
             return "index";
         }
