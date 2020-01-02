@@ -16,7 +16,7 @@ public class ArticleController {
     private ArticleService articleService;
 
     @GetMapping("/article/{id}")
-    public String getArticle(@PathVariable Integer id, Model model){
+    public String getArticle(@PathVariable Integer id, Model model) {
         Article foundArticle = articleService.getArticleById(id);
         model.addAttribute("foundArticle", foundArticle);
 
@@ -37,17 +37,8 @@ public class ArticleController {
     }
 
     // === delete article
-//    @DeleteMapping("/article/{id}")
-//    public String deleteArticle(@PathVariable Integer articleId){
-//        articleService.deleteArticle(articleId);
-//
-//        return "redirect:article/dashboard";
-//    }
-
-    // delete emp
     @DeleteMapping("/dashboard/article/{id}")
-    public String deleteEmp(@PathVariable Integer id){
-        System.out.println(articleService.getArticleById(id));
+    public String deleteEmp(@PathVariable Integer id) {
         articleService.deleteArticle(id);
         return "redirect:/dashboard";
     }
