@@ -6,3 +6,7 @@
 12/31/2019
 3. finished frontend thymeleaf pages to support data transfering from splitted b/s architecture
 4. built the persistence service with mybatis to built CRD Restful apis
+
+01/01/2019
+5. optimized the jump link
+6. finished the hadoop practice

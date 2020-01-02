@@ -65,7 +65,7 @@
 
                     <div class="row mb-2" th:each="article:${articles}">
                         <div class="col-md-6 text-left">
-                            <span class="content-post-title" th:text="${article.getTitle()}"></span>
+                            <a class="content-post-title" th:href="@{/article/} + ${article.getId()}" th:text="${article.getTitle()}"></a>
                         </div>
                         <div class="col-md-6 text-right" th:text="${#dates.format(article.getTimestamp(), 'dd/MMM/yyyy')}"></div>
                     </div>
