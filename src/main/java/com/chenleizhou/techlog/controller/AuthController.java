@@ -24,7 +24,7 @@ public class AuthController {
         return "login";
     }
 
-    @PostMapping("/user/login")
+    @PostMapping("/login")
     public String userLogin(@PathParam("username") String username,
                             @PathParam("password") String password,
                             Map<String, Object> errors,
