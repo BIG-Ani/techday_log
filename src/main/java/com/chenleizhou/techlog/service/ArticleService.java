@@ -23,7 +23,7 @@ public class ArticleService implements ArticleMapper {
     @Override
     @Cacheable(cacheNames = {"article"}, key = "#root.args[0]")
     public Article getArticleById(Integer id) {
-        System.out.println("checking>>> " + "look up the " + id + " article");
+        System.out.println("cache checking>>>:" + "look up the " + id + " article");
         return articleMapper.getArticleById(id);
     }
 
