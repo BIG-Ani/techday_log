@@ -11,3 +11,11 @@
     font-family: 'Ma Shan Zheng', cursive;;
     font-size: 33px;
 }
+
+.recent-articles {
+    margin-bottom: 1.5px;
+}
+
+.recent-articles a {
+    color: #6c757d;
+}

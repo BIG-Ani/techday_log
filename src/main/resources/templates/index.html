@@ -69,12 +69,19 @@
     <div class="my-3 p-3 bg-white rounded shadow-sm">
         <h6 class="border-bottom border-gray pb-3 mb-0">Recent updates</h6>
 
+<!--        <div class="media" th:each="article : ${articles}">-->
         <div class="media pt-3" th:each="article : ${articles}">
             <p class="media-body pb-2 mb-0 small lh-125 border-bottom border-gray">
-                <strong class="d-block text-gray-dark pd-1"
-                        th:href="@{/order/{articleId}(articleId=${article.getId()})}">[[${article.getTitle()}]]</strong>
-                <strong class="d-block text-gray-dark pb-1">@[[${article.getAuthor()}]]</strong>
-                [[${article.getContent()}]]
+                                <strong class="d-block text-gray-dark pd-1"
+                                        th:href="@{/order/{articleId}(articleId=${article.getId()})}">[[${article.getTitle()}]]</strong>
+                                <strong class="d-block text-gray-dark pb-1">@[[${article.getAuthor()}]]</strong>
+                                [[${#strings.abbreviate(article.getContent(),300)}]]
+
+<!--            <p class="media-body recent-articles lh-125">-->
+<!--                <a class="d-block text-gray-dark pd-1"-->
+<!--                        th:href="@{/article/{articleId}(articleId=${article.getId()})}">-->
+<!--                    [[${article.getTitle()}]]-->
+<!--                </a>-->
             </p>
         </div>
         <small class="d-block text-right mt-3">

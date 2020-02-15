@@ -1,5 +1,22 @@
-body{
-    width: 100ex;
+/*body{*/
+/*    !*width: 100ex;*!*/
+/*    margin: auto;*/
+/*    !*font-family: 'Gelasio', serif;*!*/
+/*}*/
+
+.article-content {
+    width: 70%;
     margin: auto;
-    font-family: 'Gelasio', serif;
+}
+
+.nav a {
+     color: #777777;
+ }
+
+.nav a:hover {
+    color: #007bff;
+}
+
+.article-title {
+    font-weight: bolder;
 }

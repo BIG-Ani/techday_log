@@ -13,3 +13,7 @@
 .content-post-title{
     color: black;
 }
+
+.nav a:hover {
+    color: #007bff;
+}

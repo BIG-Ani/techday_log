@@ -53,7 +53,6 @@ public class ArticleService implements ArticleMapper {
 
             // serialize the data before setting the redis value
             String articleStr = JSON.toJSONString(article);
-            System.out.println("redis cache checking>>> \n" + articleStr);
 
             redisTemplate.opsForValue().set(redisKey, articleStr);
             redisTemplate.expire(redisKey, 5, TimeUnit.MINUTES);
