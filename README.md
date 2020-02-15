@@ -11,3 +11,5 @@
 6. implemented the Role-based Access Control with the SpringSecurity strategy
 7. improve the flow of login and logout
 8. optimized the persistence service with the Cache to reduce retrieving data from the database
+
+9. create RedisCacheManager to support distributed caching
