@@ -95,3 +95,13 @@ body {
 .article-list{
   margin: auto;
 }
+
+.nav {
+  margin: auto;
+  padding-top: 20px;
+  font-size: 1.5em;
+}
+
+.link-logout {
+  text-align: right;
+}

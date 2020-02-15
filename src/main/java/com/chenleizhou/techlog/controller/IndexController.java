@@ -16,7 +16,7 @@ public class IndexController {
     @Autowired
     ArticleService articleService;
 
-    private static int RECENT_POSTS = 3;
+    private static int RECENT_POSTS_UPPER_BOUND = 50;
 
     @GetMapping("/index")
     public String index(Model model){
@@ -24,10 +24,10 @@ public class IndexController {
 
         Collection<Article> articles = new ArrayList<>();
 
-        if (tempArticles.size() > 3) {
+        if (tempArticles.size() > RECENT_POSTS_UPPER_BOUND) {
             ArrayList<Article> tempList = new ArrayList<>(tempArticles);
 
-            for (int i = 0; i < RECENT_POSTS; i++) {
+            for (int i = 0; i < RECENT_POSTS_UPPER_BOUND; i++) {
                 articles.add(tempList.get(tempList.size() - i - 1));
             }
         } else {

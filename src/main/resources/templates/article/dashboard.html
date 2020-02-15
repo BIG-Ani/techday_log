@@ -42,18 +42,28 @@
 	</head>
 
 	<body>
-		<nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0">
-			<a class="navbar-brand col-sm-3 col-md-2 mr-0" href="http://getbootstrap.com/docs/4.0/examples/dashboard/#">[[${session.loginUser}]]</a>
-			<input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
-			<ul class="navbar-nav px-3">
-				<li class="nav-item text-nowrap">
-					<a class="nav-link" th:href="@{/logout}">Sign out</a>
-				</li>
-<!--				<form th:href="@{/logout}" method="post">-->
-<!--					<input type="submit" value="Logout">-->
-<!--				</form>-->
-			</ul>
-		</nav>
+<!--		<nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0">-->
+<!--			<a class="navbar-brand col-sm-3 col-md-2 mr-0" href="http://getbootstrap.com/docs/4.0/examples/dashboard/#">[[${session.loginUser}]]</a>-->
+<!--			<input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">-->
+<!--			<ul class="navbar-nav px-3">-->
+<!--				<li class="nav-item text-nowrap">-->
+<!--					<a class="nav-link" th:href="@{/logout}">Sign out</a>-->
+<!--				</li>-->
+<!--			</ul>-->
+<!--		</nav>-->
+
+		<div class="nav-scroller bg-white sha dow-sm text-muted ml-5 mr-5">
+			<nav class="nav nav-underline ml-3 mr-3">
+				<!-- <a class="nav-link active" th:href="@{/dashboard}"  th:if="${session.loginUser != null}">Dashboard</a>-->
+				<a class="nav-link active" th:href="@{/dashboard}">Dashboard</a>
+				<a class="nav-link" th:href="@{/articles}">
+					Articles
+					 <span class="badge badge-pill bg-light align-text-bottom" th:text="${articles.size()}" th:href="@{/articles}">27</span>
+				</a>
+
+				<a class="nav-link link-logout" sec:authorize="isAuthenticated()" th:href="@{/logout}">Sign out</a>
+			</nav>
+		</div>
 
 		<div class="container-fluid">
 			<div class="row">
