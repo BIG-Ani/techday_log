@@ -200,14 +200,15 @@
 					<label>author</label>
 					<input name="author" type="text" class="form-control" placeholder="author" th:value="${article != null}?${article.email}">
 				</div>
-				<div class="form-group">
-					<label>content</label>
+
+				<label>content</label>
+				<div id="test-editormd" class="form-group">
 <!--					<textarea name="content" type="text" class="form-control" placeholder="content" th:value="${article != null}?${article.content}"></textarea>-->
 
 					<!-- editor.md input textarea
 					======================== -->
-					<div id="test-editormd">
-                <textarea style="display:none;">[TOC]
+<!--					<div id="test-editormd">-->
+                		<textarea name="content" type="text" class="form-control" style="display:none;">[TOC]
 
 #### Disabled options
 
@@ -240,10 +241,11 @@
 <script src="../dist/js/languages/zh-tw.js"></script>;
 ```
 </textarea>
-					</div>
-				<!-- ================== -->
+<!--					</div>-->
+					<!-- =================== -->
 
 				</div>
+
 				<div class="form-group">
 					<label>category</label>
 					<input name="category" type="text" class="form-control" placeholder="category" th:value="Algorithm">
