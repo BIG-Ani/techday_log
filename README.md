@@ -11,3 +11,8 @@
 6. implemented the Role-based Access Control with the SpringSecurity strategy
 7. improve the flow of login and logout
 8. optimized the persistence service with the Cache to reduce retrieving data from the database
+
+9. created RedisCacheManager to support distributed caching
+
+10. integrated the markdown editor for the articl adding
+ bug: changing the template structure, so that the form can not be submitted correctly
