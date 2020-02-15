@@ -16,3 +16,4 @@
 
 10. integrated the markdown editor for the articl adding
  bug: changing the template structure, so that the form can not be submitted correctly
+11. fixed the markdown form submit, implemented the markdown converter to prettify the markdown page
